@@ -1,0 +1,4 @@
+source;share/spinnaker_camera_driver/local_setup.bash
+source;share/spinnaker_camera_driver/local_setup.dsv
+source;share/spinnaker_camera_driver/local_setup.sh
+source;share/spinnaker_camera_driver/local_setup.zsh

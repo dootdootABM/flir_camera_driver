@@ -24,6 +24,7 @@
 #include <iostream>
 #include <sensor_msgs/fill_image.hpp>
 #include <sensor_msgs/image_encodings.hpp>
+#include <set>
 #include <spinnaker_camera_driver/camera_driver.hpp>
 #include <spinnaker_camera_driver/exposure_controller.hpp>
 #include <spinnaker_camera_driver/logging.hpp>
@@ -624,6 +625,15 @@ void Camera::setParameter(const NodeInfo & ni, const rclcpp::Parameter & p)
 rcl_interfaces::msg::SetParametersResult Camera::parameterChanged(
   const std::vector<rclcpp::Parameter> & params)
 {
+  // Resolution and binning params require stopping streaming first.
+  // ROS 2 calls this callback ONCE PER PARAMETER (not once per batch),
+  // so we accumulate params into a pending map and process them all
+  // in a single deferred thread after a short delay.
+  static const std::set<std::string> streamingBlockedParams = {
+    "image_width", "image_height", "offset_x", "offset_y", "binning_x", "binning_y"};
+
+  bool hasBlockedParams = false;
+
   for (const auto & p : params) {
     const auto it = parameterMap_.find(p.get_name());
     if (it == parameterMap_.end()) {
@@ -633,6 +643,22 @@ rcl_interfaces::msg::SetParametersResult Camera::parameterChanged(
       LOG_WARN("got parameter update while driver is not ready!");
       continue;
     }
+
+    // Check if this is a resolution/binning param that needs deferred handling
+    if (streamingBlockedParams.count(p.get_name()) > 0) {
+      auto bd = get_double_int_param(p);
+      if (bd.first) {
+        const NodeInfo & ni = it->second;
+        {
+          std::lock_guard<std::mutex> lock(pendingResolutionMutex_);
+          pendingResolutionParams_[ni.name] = static_cast<int>(bd.second);
+        }
+        LOG_INFO("queuing " << p.get_name() << " = " << bd.second);
+        hasBlockedParams = true;
+      }
+      continue;  // skip normal processing
+    }
+
     const NodeInfo & ni = it->second;
     if (p.get_type() == rclcpp::PARAMETER_NOT_SET) {
       continue;
@@ -643,10 +669,96 @@ rcl_interfaces::msg::SetParametersResult Camera::parameterChanged(
       LOG_WARN("param " << p.get_name() << " " << e.what());
     }
   }
+
+  // Launch deferred thread if we have pending params and no thread is running
+  if (hasBlockedParams && !resolutionChangeInProgress_.exchange(true)) {
+    std::thread(&Camera::deferredResolutionChange, this).detach();
+  }
+
   rcl_interfaces::msg::SetParametersResult res;
   res.successful = true;
   res.reason = "all good!";
   return (res);
+}
+
+void Camera::deferredResolutionChange()
+{
+  // Wait briefly to accumulate all params from a batch (ROS sends them one by one)
+  std::this_thread::sleep_for(std::chrono::milliseconds(500));
+
+  // Grab all pending params
+  std::map<std::string, int> params;
+  {
+    std::lock_guard<std::mutex> lock(pendingResolutionMutex_);
+    params = std::move(pendingResolutionParams_);
+    pendingResolutionParams_.clear();
+  }
+
+  if (params.empty()) {
+    resolutionChangeInProgress_ = false;
+    return;
+  }
+
+  LOG_INFO("deferred resolution change: stopping streaming...");
+  bool wasStreaming = cameraStreaming_;
+  if (wasStreaming) {
+    stopStreaming();
+  }
+
+  // Helper lambda: set an int parameter via wrapper, catch all exceptions
+  auto trySetInt = [&](const std::string & nodeName, int val) {
+    try {
+      LOG_INFO("setting " << nodeName << " to: " << val);
+      int retVal;
+      std::string msg = wrapper_->setInt(nodeName, val, &retVal);
+      if (msg != "OK") {
+        LOG_WARN("setting " << nodeName << " failed: " << msg);
+      } else if (retVal != val) {
+        LOG_WARN(nodeName << " clamped to: " << retVal << " (requested: " << val << ")");
+      } else {
+        LOG_INFO(nodeName << " set OK to: " << retVal);
+      }
+    } catch (const std::exception & e) {
+      LOG_WARN("exception setting " << nodeName << ": " << e.what());
+    }
+  };
+
+  // Apply in correct Spinnaker SDK order (from user's flir_controller.cpp pattern):
+  // 1. Reset offsets to 0 first (avoids ROI conflicts with new resolution)
+  trySetInt("ImageFormatControl/OffsetX", 0);
+  trySetInt("ImageFormatControl/OffsetY", 0);
+
+  // 2. Set binning (changes effective sensor area before width/height)
+  if (params.count("ImageFormatControl/BinningHorizontal")) {
+    trySetInt(
+      "ImageFormatControl/BinningHorizontal", params["ImageFormatControl/BinningHorizontal"]);
+  }
+  if (params.count("ImageFormatControl/BinningVertical")) {
+    trySetInt("ImageFormatControl/BinningVertical", params["ImageFormatControl/BinningVertical"]);
+  }
+
+  // 3. Set width/height
+  if (params.count("ImageFormatControl/Width")) {
+    trySetInt("ImageFormatControl/Width", params["ImageFormatControl/Width"]);
+  }
+  if (params.count("ImageFormatControl/Height")) {
+    trySetInt("ImageFormatControl/Height", params["ImageFormatControl/Height"]);
+  }
+
+  // 4. Set offsets to desired values (if non-zero was requested)
+  if (params.count("ImageFormatControl/OffsetX") && params["ImageFormatControl/OffsetX"] > 0) {
+    trySetInt("ImageFormatControl/OffsetX", params["ImageFormatControl/OffsetX"]);
+  }
+  if (params.count("ImageFormatControl/OffsetY") && params["ImageFormatControl/OffsetY"] > 0) {
+    trySetInt("ImageFormatControl/OffsetY", params["ImageFormatControl/OffsetY"]);
+  }
+
+  if (wasStreaming) {
+    LOG_INFO("deferred resolution change: restarting streaming...");
+    startStreaming();
+  }
+  resolutionChangeInProgress_ = false;
+  LOG_INFO("deferred resolution change complete.");
 }
 
 void Camera::controlCallback(const flir_camera_msgs::msg::CameraControl::UniquePtr msg)

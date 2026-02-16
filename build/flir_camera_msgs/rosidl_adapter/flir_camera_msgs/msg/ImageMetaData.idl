@@ -1,0 +1,35 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from flir_camera_msgs/msg/ImageMetaData.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module flir_camera_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "meta data messages for camera images")
+    struct ImageMetaData {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "time stamp produced by camera, interpretation depends on camera model")
+      uint64 camera_time;
+
+      @verbatim (language="comment", text=
+        "computed brightness, either 0...255 (valid) or -1 (invalid)")
+      int16 brightness;
+
+      @verbatim (language="comment", text=
+        "exposure time in microseconds")
+      uint32 exposure_time;
+
+      @verbatim (language="comment", text=
+        "max allowed exposure time in microseconds")
+      uint32 max_exposure_time;
+
+      @verbatim (language="comment", text=
+        "gain in db")
+      float gain;
+    };
+  };
+};

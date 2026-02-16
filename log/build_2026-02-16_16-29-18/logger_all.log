@@ -1,0 +1,245 @@
+[0.044s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--packages-up-to', 'spinnaker_camera_driver']
+[0.044s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=128, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=['spinnaker_camera_driver'], packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x75b70895fd00>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x75b70895f850>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x75b70895f850>>, mixin_verb=('build',))
+[0.119s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.120s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.120s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.120s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.120s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.120s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.120s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extensions ['ignore', 'ignore_ament_install']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'ignore'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'ignore_ament_install'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extensions ['colcon_pkg']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'colcon_pkg'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extensions ['colcon_meta']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'colcon_meta'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extensions ['ros']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'ros'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extensions ['cmake', 'python']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'cmake'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'python'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extensions ['python_setup_py']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'python_setup_py'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(flir_camera_description) by extensions ['ignore', 'ignore_ament_install']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(flir_camera_description) by extension 'ignore'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(flir_camera_description) by extension 'ignore_ament_install'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(flir_camera_description) by extensions ['colcon_pkg']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(flir_camera_description) by extension 'colcon_pkg'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(flir_camera_description) by extensions ['colcon_meta']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(flir_camera_description) by extension 'colcon_meta'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(flir_camera_description) by extensions ['ros']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(flir_camera_description) by extension 'ros'
+[0.138s] DEBUG:colcon.colcon_core.package_identification:Package 'flir_camera_description' with type 'ros.ament_cmake' and name 'flir_camera_description'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(flir_camera_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(flir_camera_msgs) by extension 'ignore'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(flir_camera_msgs) by extension 'ignore_ament_install'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(flir_camera_msgs) by extensions ['colcon_pkg']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(flir_camera_msgs) by extension 'colcon_pkg'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(flir_camera_msgs) by extensions ['colcon_meta']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(flir_camera_msgs) by extension 'colcon_meta'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(flir_camera_msgs) by extensions ['ros']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(flir_camera_msgs) by extension 'ros'
+[0.138s] DEBUG:colcon.colcon_core.package_identification:Package 'flir_camera_msgs' with type 'ros.ament_cmake' and name 'flir_camera_msgs'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(spinnaker_camera_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(spinnaker_camera_driver) by extension 'ignore'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(spinnaker_camera_driver) by extension 'ignore_ament_install'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(spinnaker_camera_driver) by extensions ['colcon_pkg']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(spinnaker_camera_driver) by extension 'colcon_pkg'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(spinnaker_camera_driver) by extensions ['colcon_meta']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(spinnaker_camera_driver) by extension 'colcon_meta'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(spinnaker_camera_driver) by extensions ['ros']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(spinnaker_camera_driver) by extension 'ros'
+[0.139s] DEBUG:colcon.colcon_core.package_identification:Package 'spinnaker_camera_driver' with type 'ros.ament_cmake' and name 'spinnaker_camera_driver'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(spinnaker_synchronized_camera_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(spinnaker_synchronized_camera_driver) by extension 'ignore'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(spinnaker_synchronized_camera_driver) by extension 'ignore_ament_install'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(spinnaker_synchronized_camera_driver) by extensions ['colcon_pkg']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(spinnaker_synchronized_camera_driver) by extension 'colcon_pkg'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(spinnaker_synchronized_camera_driver) by extensions ['colcon_meta']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(spinnaker_synchronized_camera_driver) by extension 'colcon_meta'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(spinnaker_synchronized_camera_driver) by extensions ['ros']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(spinnaker_synchronized_camera_driver) by extension 'ros'
+[0.139s] DEBUG:colcon.colcon_core.package_identification:Package 'spinnaker_synchronized_camera_driver' with type 'ros.ament_cmake' and name 'spinnaker_synchronized_camera_driver'
+[0.139s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.139s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.139s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.139s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.139s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.148s] INFO:colcon.colcon_core.package_selection:Skipping package 'spinnaker_synchronized_camera_driver' in 'spinnaker_synchronized_camera_driver'
+[0.148s] INFO:colcon.colcon_core.package_selection:Skipping package 'flir_camera_description' in 'flir_camera_description'
+[0.148s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.148s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.149s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install
+[0.149s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/karthik/dds_ros2/flirCAMERA/install
+[0.149s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/karthik/dds_ros2/flirCAMERA/ros2_ws/install
+[0.149s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 281 installed packages in /opt/ros/humble
+[0.150s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'flir_camera_msgs' build argument 'cmake_args' from command line to 'None'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'flir_camera_msgs' build argument 'cmake_target' from command line to 'None'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'flir_camera_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'flir_camera_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'flir_camera_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'flir_camera_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'flir_camera_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'flir_camera_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'flir_camera_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.165s] DEBUG:colcon.colcon_core.verb:Building package 'flir_camera_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/flir_camera_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs', 'merge_install': False, 'path': '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/flir_camera_msgs', 'symlink_install': True, 'test_result_base': None}
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'spinnaker_camera_driver' build argument 'cmake_args' from command line to 'None'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'spinnaker_camera_driver' build argument 'cmake_target' from command line to 'None'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'spinnaker_camera_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'spinnaker_camera_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'spinnaker_camera_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'spinnaker_camera_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'spinnaker_camera_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'spinnaker_camera_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.165s] Level 5:colcon.colcon_core.verb:set package 'spinnaker_camera_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.165s] DEBUG:colcon.colcon_core.verb:Building package 'spinnaker_camera_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver', 'merge_install': False, 'path': '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/spinnaker_camera_driver', 'symlink_install': True, 'test_result_base': None}
+[0.165s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.166s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.166s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/flir_camera_msgs' with build type 'ament_cmake'
+[0.166s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/flir_camera_msgs'
+[0.167s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.167s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.167s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.174s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/flir_camera_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/flir_camera_msgs -- -j128 -l128
+[0.352s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/flir_camera_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/flir_camera_msgs -- -j128 -l128
+[0.358s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/flir_camera_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/flir_camera_msgs
+[0.391s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(flir_camera_msgs)
+[0.391s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/flir_camera_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/flir_camera_msgs
+[0.393s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs' for CMake module files
+[0.393s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs' for CMake config files
+[0.393s] Level 1:colcon.colcon_core.shell:create_environment_hook('flir_camera_msgs', 'cmake_prefix_path')
+[0.393s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/hook/cmake_prefix_path.ps1'
+[0.394s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/hook/cmake_prefix_path.dsv'
+[0.394s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/hook/cmake_prefix_path.sh'
+[0.394s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/lib'
+[0.395s] Level 1:colcon.colcon_core.shell:create_environment_hook('flir_camera_msgs', 'ld_library_path_lib')
+[0.395s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/hook/ld_library_path_lib.ps1'
+[0.395s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/hook/ld_library_path_lib.dsv'
+[0.395s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/hook/ld_library_path_lib.sh'
+[0.395s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/bin'
+[0.395s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/lib/pkgconfig/flir_camera_msgs.pc'
+[0.395s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/lib/python3.10/site-packages'
+[0.395s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/bin'
+[0.396s] INFO:colcon.colcon_core.shell:Creating package script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/package.ps1'
+[0.396s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/package.dsv'
+[0.396s] INFO:colcon.colcon_core.shell:Creating package script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/package.sh'
+[0.396s] INFO:colcon.colcon_core.shell:Creating package script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/package.bash'
+[0.397s] INFO:colcon.colcon_core.shell:Creating package script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/package.zsh'
+[0.397s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/colcon-core/packages/flir_camera_msgs)
+[0.397s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(flir_camera_msgs)
+[0.397s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs' for CMake module files
+[0.398s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs' for CMake config files
+[0.398s] Level 1:colcon.colcon_core.shell:create_environment_hook('flir_camera_msgs', 'cmake_prefix_path')
+[0.398s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/hook/cmake_prefix_path.ps1'
+[0.398s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/hook/cmake_prefix_path.dsv'
+[0.398s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/hook/cmake_prefix_path.sh'
+[0.398s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/lib'
+[0.398s] Level 1:colcon.colcon_core.shell:create_environment_hook('flir_camera_msgs', 'ld_library_path_lib')
+[0.398s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/hook/ld_library_path_lib.ps1'
+[0.399s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/hook/ld_library_path_lib.dsv'
+[0.399s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/hook/ld_library_path_lib.sh'
+[0.399s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/bin'
+[0.399s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/lib/pkgconfig/flir_camera_msgs.pc'
+[0.399s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/lib/python3.10/site-packages'
+[0.399s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/bin'
+[0.399s] INFO:colcon.colcon_core.shell:Creating package script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/package.ps1'
+[0.400s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/package.dsv'
+[0.400s] INFO:colcon.colcon_core.shell:Creating package script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/package.sh'
+[0.400s] INFO:colcon.colcon_core.shell:Creating package script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/package.bash'
+[0.400s] INFO:colcon.colcon_core.shell:Creating package script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/package.zsh'
+[0.400s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/colcon-core/packages/flir_camera_msgs)
+[0.400s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/spinnaker_camera_driver' with build type 'ament_cmake'
+[0.400s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/spinnaker_camera_driver'
+[0.400s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.401s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.407s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver': CMAKE_PREFIX_PATH=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs:/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver:/opt/ros/humble LD_LIBRARY_PATH=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/lib:/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver -- -j128 -l128
+[0.459s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver' returned '0': CMAKE_PREFIX_PATH=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs:/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver:/opt/ros/humble LD_LIBRARY_PATH=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/lib:/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver -- -j128 -l128
+[0.460s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver': CMAKE_PREFIX_PATH=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs:/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver:/opt/ros/humble LD_LIBRARY_PATH=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/lib:/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver
+[0.472s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(spinnaker_camera_driver)
+[0.473s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver' for CMake module files
+[0.473s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver' returned '0': CMAKE_PREFIX_PATH=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs:/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver:/opt/ros/humble LD_LIBRARY_PATH=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/lib:/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver
+[0.473s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver' for CMake config files
+[0.474s] Level 1:colcon.colcon_core.shell:create_environment_hook('spinnaker_camera_driver', 'cmake_prefix_path')
+[0.474s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/hook/cmake_prefix_path.ps1'
+[0.474s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/hook/cmake_prefix_path.dsv'
+[0.474s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/hook/cmake_prefix_path.sh'
+[0.475s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib'
+[0.475s] Level 1:colcon.colcon_core.shell:create_environment_hook('spinnaker_camera_driver', 'ld_library_path_lib')
+[0.475s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/hook/ld_library_path_lib.ps1'
+[0.475s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/hook/ld_library_path_lib.dsv'
+[0.475s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/hook/ld_library_path_lib.sh'
+[0.475s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/bin'
+[0.475s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/pkgconfig/spinnaker_camera_driver.pc'
+[0.476s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/python3.10/site-packages'
+[0.476s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/bin'
+[0.476s] INFO:colcon.colcon_core.shell:Creating package script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/package.ps1'
+[0.476s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/package.dsv'
+[0.476s] INFO:colcon.colcon_core.shell:Creating package script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/package.sh'
+[0.476s] INFO:colcon.colcon_core.shell:Creating package script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/package.bash'
+[0.477s] INFO:colcon.colcon_core.shell:Creating package script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/package.zsh'
+[0.477s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/colcon-core/packages/spinnaker_camera_driver)
+[0.477s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(spinnaker_camera_driver)
+[0.477s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver' for CMake module files
+[0.477s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver' for CMake config files
+[0.478s] Level 1:colcon.colcon_core.shell:create_environment_hook('spinnaker_camera_driver', 'cmake_prefix_path')
+[0.478s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/hook/cmake_prefix_path.ps1'
+[0.478s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/hook/cmake_prefix_path.dsv'
+[0.478s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/hook/cmake_prefix_path.sh'
+[0.478s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib'
+[0.478s] Level 1:colcon.colcon_core.shell:create_environment_hook('spinnaker_camera_driver', 'ld_library_path_lib')
+[0.478s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/hook/ld_library_path_lib.ps1'
+[0.479s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/hook/ld_library_path_lib.dsv'
+[0.479s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/hook/ld_library_path_lib.sh'
+[0.479s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/bin'
+[0.479s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/pkgconfig/spinnaker_camera_driver.pc'
+[0.479s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/python3.10/site-packages'
+[0.479s] Level 1:colcon.colcon_core.environment:checking '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/bin'
+[0.479s] INFO:colcon.colcon_core.shell:Creating package script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/package.ps1'
+[0.480s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/package.dsv'
+[0.480s] INFO:colcon.colcon_core.shell:Creating package script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/package.sh'
+[0.480s] INFO:colcon.colcon_core.shell:Creating package script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/package.bash'
+[0.480s] INFO:colcon.colcon_core.shell:Creating package script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/package.zsh'
+[0.480s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/colcon-core/packages/spinnaker_camera_driver)
+[0.480s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[0.481s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[0.481s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[0.481s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[0.484s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[0.484s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[0.484s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[0.491s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[0.491s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/local_setup.ps1'
+[0.492s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/_local_setup_util_ps1.py'
+[0.492s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/setup.ps1'
+[0.493s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/local_setup.sh'
+[0.493s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/_local_setup_util_sh.py'
+[0.493s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/setup.sh'
+[0.494s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/local_setup.bash'
+[0.494s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/setup.bash'
+[0.494s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/local_setup.zsh'
+[0.494s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/setup.zsh'

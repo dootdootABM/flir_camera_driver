@@ -16,6 +16,7 @@
 #ifndef SPINNAKER_CAMERA_DRIVER__CAMERA_HPP_
 #define SPINNAKER_CAMERA_DRIVER__CAMERA_HPP_
 
+#include <atomic>
 #include <camera_info_manager/camera_info_manager.hpp>
 #include <deque>
 #include <diagnostic_updater/diagnostic_updater.hpp>
@@ -36,6 +37,7 @@
 #include <spinnaker_camera_driver/synchronizer.hpp>
 #include <std_msgs/msg/float64.hpp>
 #include <thread>
+#include <vector>
 
 namespace spinnaker_camera_driver
 {
@@ -89,6 +91,7 @@ private:
   void printCameraInfo();
   bool startStreaming();
   bool stopStreaming();
+  void deferredResolutionChange();  // runs in a detached thread
   void createCameraParameters();
   void setParameter(const NodeInfo & ni, const rclcpp::Parameter & p);
   bool setEnum(const std::string & nodeName, const std::string & v = "");
@@ -243,6 +246,9 @@ private:
   FunctionDiagnosticsTask acquisitionErrorTask_;
   uint64_t acquisitionTimeouts_{0};
   bool acquisitionError_{false};
+  std::atomic<bool> resolutionChangeInProgress_{false};
+  std::mutex pendingResolutionMutex_;
+  std::map<std::string, int> pendingResolutionParams_;  // GenICam node name -> value
 };
 }  // namespace spinnaker_camera_driver
 #endif  // SPINNAKER_CAMERA_DRIVER__CAMERA_HPP_
