@@ -250,6 +250,20 @@ std::string SpinnakerWrapperImpl::setInt(const std::string & nn, int val, int * 
   return (set_parameter<GenApi::CIntegerPtr, int>(nn, val, retVal, camera_, debug_));
 }
 
+int SpinnakerWrapperImpl::getIntMax(const std::string & nn)
+{
+  Lock lock(cameraMutex_);
+  const auto np = genicam_utils::find_node(nn, camera_, debug_);
+  if (!np) {
+    return (-1);
+  }
+  GenApi::CIntegerPtr p = static_cast<GenApi::CIntegerPtr>(*np);
+  if (!is_readable(p)) {
+    return (-1);
+  }
+  return (static_cast<int>(p->GetMax()));
+}
+
 std::string SpinnakerWrapperImpl::execute(const std::string & nn)
 {
   Lock lock(cameraMutex_);
