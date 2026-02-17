@@ -1,1 +1,1 @@
-/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/spinnaker_camera_driver
+libusb-1.0-dev;ffmpeg;libomp-dev;yaml-cpp;camera_info_manager;diagnostic_updater;flir_camera_msgs;image_transport;rclcpp;rclcpp_components;sensor_msgs;std_msgs;ament_lint_auto;ament_lint_common;ament_cmake_clang_format

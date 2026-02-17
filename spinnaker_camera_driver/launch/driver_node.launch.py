@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-# -----------------------------------------------------------------------------
-# Copyright 2022 Bernd Pfrommer
-# Licensed under the Apache License, Version 2.0
-# -----------------------------------------------------------------------------
 
 import os
 import re
@@ -14,13 +10,6 @@ from launch.substitutions import LaunchConfiguration as LaunchConfig
 from launch.substitutions import PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
-
-
-CAMERA_MAX_RESOLUTIONS = {
-    "firefly": {"width": 1440, "height": 1080},
-    "blackfly_s": {"width": 2448, "height": 2048},
-    "blackfly": {"width": 1920, "height": 1200},
-}
 
 
 def get_camera_serial_numbers():
@@ -36,24 +25,6 @@ def get_camera_serial_numbers():
                             serials.append(s)
     except Exception:
         pass
-
-    if not serials:
-        try:
-            import subprocess
-            result = subprocess.run(
-                ["v4l2-ctl", "--list-devices"],
-                capture_output=True,
-                text=True,
-                timeout=2,
-            )
-            for line in result.stdout.split("\n"):
-                if ("FLIR" in line) or ("Firefly" in line):
-                    m = re.search(r"(\d{7,9})", line)
-                    if m:
-                        serials.append(m.group(1))
-        except Exception:
-            pass
-
     return serials
 
 
@@ -72,13 +43,10 @@ EXAMPLE_PARAMETERS = {
         "trigger_mode": "Off",
         "chunk_mode_active": True,
         "chunk_enable_frame_id": True,
+        "balance_white_auto": "Continuous",
     },
-    "blackfly_s": {
-        "exposure_auto": "Off",
-    },
-    "blackfly": {
-        "exposure_auto": "Off",
-    },
+    "blackfly_s": {"exposure_auto": "Off", "balance_white_auto": "Continuous"},
+    "blackfly": {"exposure_auto": "Off", "balance_white_auto": "Continuous"},
 }
 
 
@@ -93,14 +61,16 @@ def launch_setup(context, *args, **kwargs):
     else:
         serial = serial_arg.strip("'\"")
 
-    if camera_type in CAMERA_MAX_RESOLUTIONS:
-        max_w = CAMERA_MAX_RESOLUTIONS[camera_type]["width"]
-        max_h = CAMERA_MAX_RESOLUTIONS[camera_type]["height"]
-    else:
-        max_w, max_h = 1440, 1080
-
-    target_w = int(LaunchConfig("image_width").perform(context))
-    target_h = int(LaunchConfig("image_height").perform(context))
+    # Force 640x480 Center Crop
+    # Full sensor is 1440x1080 (Firefly)
+    # Target: 640x480
+    # Offset X = (1440 - 640) / 2 = 400
+    # Offset Y = (1080 - 480) / 2 = 300
+    
+    cap_w = 640
+    cap_h = 480
+    off_x = 400
+    off_y = 300
 
     if camera_type in EXAMPLE_PARAMETERS:
         camera_params = EXAMPLE_PARAMETERS[camera_type].copy()
@@ -109,61 +79,42 @@ def launch_setup(context, *args, **kwargs):
 
     camera_params.update(
         {
-            "image_width": max_w,
-            "image_height": max_h,
-            "offset_x": 0,
-            "offset_y": 0,
+            "image_width": cap_w,
+            "image_height": cap_h,
+            "offset_x": off_x,
+            "offset_y": off_y,
             "binning_x": 1,
             "binning_y": 1,
-            "serial_number": serial,
-            "parameter_file": PathJoinSubstitution(
-                [FindPackageShare("spinnaker_camera_driver"), "config", f"{camera_type}.yaml"]
-            ),
         }
     )
 
-    nodes = []
+    parameter_file_arg = LaunchConfig("parameter_file").perform(context)
+    if not parameter_file_arg:
+        parameter_file = PathJoinSubstitution(
+            [FindPackageShare("spinnaker_camera_driver"), "config", f"{camera_type}.yaml"]
+        )
+    else:
+        parameter_file = parameter_file_arg
 
-    nodes.append(
+    nodes = [
         Node(
             package="spinnaker_camera_driver",
             executable="camera_driver_node",
             output="screen",
             name=camera_name,
-            parameters=[camera_params],
+            parameters=[
+                camera_params,
+                {
+                    "parameter_file": parameter_file,
+                    "serial_number": serial,
+                    "ffmpeg_image_transport.encoding": "hevc_nvenc",
+                },
+            ],
             remappings=[
                 ("~/control", "/exposure_control/control"),
             ],
         )
-    )
-
-    nodes.append(
-        Node(
-            package="image_proc",
-            executable="resize_node",
-            name="image_resizer",
-            namespace=camera_name,
-            parameters=[
-                {
-                    "use_scale": False,
-                    "width": target_w,
-                    "height": target_h,
-                    "interpolation": 1,
-                }
-            ],
-            remappings=[
-                ("image/image_raw", "image_raw"),
-                ("image/camera_info", "camera_info"),
-                ("resize/image_raw", "image_resized"),
-                ("resize/camera_info", "camera_info_resized"),
-            ],
-            arguments=[
-                "--ros-args",
-                "--param", "qos_overrides./image.subscription.reliability:=best_effort",
-                "--param", "qos_overrides./camera_info.subscription.reliability:=best_effort",
-            ],
-        )
-    )
+    ]
 
     return nodes
 
@@ -174,8 +125,8 @@ def generate_launch_description():
             LaunchArg("camera_name", default_value="flir_camera"),
             LaunchArg("camera_type", default_value="firefly"),
             LaunchArg("serial", default_value="auto"),
-            LaunchArg("image_width", default_value="1440", description="Target Width"),
-            LaunchArg("image_height", default_value="1080", description="Target Height"),
+            LaunchArg("parameter_file", default_value=""),
+            # Width/Height args are ignored here as we hardcoded center crop
             OpaqueFunction(function=launch_setup),
         ]
     )

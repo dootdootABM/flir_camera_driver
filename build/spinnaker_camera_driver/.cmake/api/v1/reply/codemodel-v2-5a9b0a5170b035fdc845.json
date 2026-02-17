@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-RelWithDebInfo-ec906eb6a7b358d7bb70.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "spinnaker_camera_driver",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "camera_driver::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-camera_driver-RelWithDebInfo-8d48a4c3a641550c512a.json",
+					"name" : "camera_driver",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "camera_driver_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-camera_driver_node-RelWithDebInfo-29187143460cbb40423e.json",
+					"name" : "camera_driver_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "spinnaker_camera_driver_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-spinnaker_camera_driver_uninstall-RelWithDebInfo-5303d66fe39730840986.json",
+					"name" : "spinnaker_camera_driver_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-RelWithDebInfo-c3411e94924212b1778f.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver",
+		"source" : "/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/spinnaker_camera_driver"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

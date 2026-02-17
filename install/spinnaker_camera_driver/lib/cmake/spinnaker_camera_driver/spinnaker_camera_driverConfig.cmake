@@ -1,1 +1,14 @@
-/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver/spinnaker_camera_driverConfig.cmake
+include(CMakeFindDependencyMacro)
+
+# find_dependency(SPINNAKER)
+find_dependency(camera_info_manager)
+find_dependency(diagnostic_updater)
+find_dependency(flir_camera_msgs)
+find_dependency(image_transport)
+find_dependency(sensor_msgs)
+find_dependency(rclcpp)
+find_dependency(rclcpp_components)
+find_dependency(std_msgs)
+
+# Add the targets file
+include("${CMAKE_CURRENT_LIST_DIR}/spinnaker_camera_driverTargets.cmake")

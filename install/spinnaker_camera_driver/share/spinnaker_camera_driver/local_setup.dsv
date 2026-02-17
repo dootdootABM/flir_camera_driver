@@ -1,1 +1,2 @@
-/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver/ament_cmake_environment_hooks/local_setup.dsv
+source;share/spinnaker_camera_driver/environment/ament_prefix_path.sh
+source;share/spinnaker_camera_driver/environment/path.sh

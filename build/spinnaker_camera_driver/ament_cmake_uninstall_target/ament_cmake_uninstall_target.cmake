@@ -55,6 +55,3 @@ endforeach()
 message(STATUS "Execute custom uninstall script")
 
 # begin of custom uninstall code
-
-# uninstall files installed using the symlink install functions
-include("/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")

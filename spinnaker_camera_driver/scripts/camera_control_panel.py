@@ -10,7 +10,6 @@ import cv2
 import tkinter as tk
 from tkinter import ttk
 import threading
-import queue
 from PIL import Image as PILImage, ImageTk
 from rclpy.qos import qos_profile_sensor_data
 
@@ -37,11 +36,11 @@ class CameraControlPanel(Node):
         self.root.title("FLIR Camera Control")
         self.root.geometry("900x750")
         
-        self.gui_queue = queue.Queue()
         self.first_image = True
+        self.canvas_w = 880
+        self.canvas_h = 500
         
         self.create_widgets()
-        self.root.after(16, self.process_queue)
         threading.Thread(target=self.initial_load, daemon=True).start()
     
     def create_widgets(self):
@@ -54,7 +53,7 @@ class CameraControlPanel(Node):
         video_frame = ttk.LabelFrame(content, text="Live Feed (Resized)", padding=5)
         video_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True, padx=5, pady=5)
         
-        self.canvas = tk.Canvas(video_frame, width=880, height=500, bg='black', highlightthickness=0)
+        self.canvas = tk.Canvas(video_frame, width=self.canvas_w, height=self.canvas_h, bg='black', highlightthickness=0)
         self.canvas.pack(fill=tk.BOTH, expand=True)
         
         param_grid = ttk.Frame(controls_frame)
@@ -127,18 +126,6 @@ class CameraControlPanel(Node):
         self.gain_timer = None
         self.fps_timer = None
     
-    def process_queue(self):
-        count = 0
-        try:
-            while count < 5:
-                task = self.gui_queue.get_nowait()
-                task()
-                count += 1
-        except queue.Empty:
-            pass
-        finally:
-            self.root.after(16, self.process_queue)
-    
     def image_callback(self, msg):
         try:
             cv_img = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
@@ -148,11 +135,8 @@ class CameraControlPanel(Node):
                 self.first_image = False
                 self.send_driver_param('balance_white_auto', 'Continuous', ParameterType.PARAMETER_STRING)
             
-            canvas_w = 880
-            canvas_h = 500
-            
-            scale_w = canvas_w / float(w)
-            scale_h = canvas_h / float(h)
+            scale_w = self.canvas_w / float(w)
+            scale_h = self.canvas_h / float(h)
             scale = min(scale_w, scale_h)
             
             new_w = int(w * scale)
@@ -163,11 +147,11 @@ class CameraControlPanel(Node):
             pil_img = PILImage.fromarray(cv_img_rgb)
             tk_img = ImageTk.PhotoImage(image=pil_img)
             
-            x_offset = (canvas_w - new_w) // 2
-            y_offset = (canvas_h - new_h) // 2
+            x_offset = (self.canvas_w - new_w) // 2
+            y_offset = (self.canvas_h - new_h) // 2
             
-            self.gui_queue.put(lambda img=tk_img, x=x_offset, y=y_offset: self.update_canvas(img, x, y))
-        except Exception:
+            self.root.after_idle(self.update_canvas, tk_img, x_offset, y_offset)
+        except Exception as e:
             pass
     
     def update_canvas(self, tk_img, x, y):
@@ -177,16 +161,9 @@ class CameraControlPanel(Node):
     
     def initial_load(self):
         if not self.client_driver.wait_for_service(timeout_sec=2.0):
-            self.update_status("Error: Camera Driver service not found")
+            self.root.after_idle(lambda: self.status_label.config(text="Error: Camera Driver service not found"))
             return
-        self.update_status("Services connected. Ready")
-    
-    def update_status(self, text):
-        self.gui_queue.put(lambda: self.status_label.config(text=text))
-    
-    def update_entry(self, entry, value):
-        entry.delete(0, tk.END)
-        entry.insert(0, value)
+        self.root.after_idle(lambda: self.status_label.config(text="Services connected. Ready"))
     
     def send_driver_param(self, name, value, ptype):
         req = SetParameters.Request()
@@ -216,7 +193,8 @@ class CameraControlPanel(Node):
         self.exposure_timer.start()
     
     def set_exposure_manual_slide(self, val):
-        self.gui_queue.put(lambda: self.update_entry(self.exposure_entry, str(int(float(val)))))
+        self.exposure_entry.delete(0, tk.END)
+        self.exposure_entry.insert(0, str(int(float(val))))
         self.send_driver_param('exposure_time', float(val), ParameterType.PARAMETER_DOUBLE)
     
     def set_exposure_manual(self, event):
@@ -237,7 +215,8 @@ class CameraControlPanel(Node):
         self.gain_timer.start()
     
     def set_gain_manual_slide(self, val):
-        self.gui_queue.put(lambda: self.update_entry(self.gain_entry, str(round(float(val), 2))))
+        self.gain_entry.delete(0, tk.END)
+        self.gain_entry.insert(0, str(round(float(val), 2)))
         self.send_driver_param('gain', float(val), ParameterType.PARAMETER_DOUBLE)
     
     def set_gain_manual(self, event):
@@ -258,7 +237,8 @@ class CameraControlPanel(Node):
         self.fps_timer.start()
     
     def set_fps_manual_slide(self, val):
-        self.gui_queue.put(lambda: self.update_entry(self.fps_entry, str(round(float(val), 2))))
+        self.fps_entry.delete(0, tk.END)
+        self.fps_entry.insert(0, str(round(float(val), 2)))
         self.send_driver_param('frame_rate', float(val), ParameterType.PARAMETER_DOUBLE)
     
     def set_fps_manual(self, event):
@@ -274,7 +254,7 @@ class CameraControlPanel(Node):
     
     def run(self):
         while rclpy.ok():
-            rclpy.spin_once(self, timeout_sec=0.01)
+            rclpy.spin_once(self, timeout_sec=0.0)
             self.root.update()
 
 

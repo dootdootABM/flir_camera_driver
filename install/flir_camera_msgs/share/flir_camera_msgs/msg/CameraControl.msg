@@ -1,1 +1,0 @@
-/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/flir_camera_msgs/msg/CameraControl.msg
