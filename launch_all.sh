@@ -19,6 +19,8 @@ GAIN="30"
 # Frame Rate (Hz)
 FPS="60.0"
 
+# Decimation Factor (1 = Full Res, 2 = Half, 4 = Quarter)
+DECIMATION="2"
 
 # --- 1. Clean & Rebuild ---
 echo "---------------------------------------"
@@ -51,6 +53,7 @@ ros2 launch spinnaker_camera_driver driver_node.launch.py \
   exposure_auto:=$EXPOSURE_AUTO \
   exposure_time:=$EXPOSURE_TIME \
   gain_auto:=$GAIN_AUTO \
+  decimation:=$DECIMATION \
   gain:=$GAIN \
   fps:=$FPS &
 
