@@ -1,0 +1,89 @@
+-- Found inc dir: /opt/spinnaker/include
+-- Found variable: TRUE at /opt/spinnaker/lib/libSpinnaker.so and /opt/spinnaker/include
+-- spinnaker SDK found installed
+-- libSpinnaker library location: /opt/spinnaker/lib/libSpinnaker.so
+-- libSpinnaker include location: /opt/spinnaker/include
+-- Found inc dir: /opt/spinnaker/include
+-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+-- Found camera_info_manager: 3.1.12 (/opt/ros/humble/share/camera_info_manager/cmake)
+-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found diagnostic_updater: 4.0.6 (/opt/ros/humble/share/diagnostic_updater/cmake)
+-- Found flir_camera_msgs: 3.0.4 (/opt/ros/humble/share/flir_camera_msgs/cmake)
+-- Found image_transport: 3.1.12 (/opt/ros/humble/share/image_transport/cmake)
+-- Found rclcpp_components: 16.0.17 (/opt/ros/humble/share/rclcpp_components/cmake)
+-- Found ament_cmake_copyright: 0.12.14 (/opt/ros/humble/share/ament_cmake_copyright/cmake)
+-- Found ament_cmake_cppcheck: 0.12.14 (/opt/ros/humble/share/ament_cmake_cppcheck/cmake)
+-- Found ament_cmake_cpplint: 0.12.14 (/opt/ros/humble/share/ament_cmake_cpplint/cmake)
+-- Found ament_cmake_flake8: 0.12.14 (/opt/ros/humble/share/ament_cmake_flake8/cmake)
+-- Found ament_cmake_lint_cmake: 0.12.14 (/opt/ros/humble/share/ament_cmake_lint_cmake/cmake)
+-- Found ament_cmake_pep257: 0.12.14 (/opt/ros/humble/share/ament_cmake_pep257/cmake)
+-- Found ament_cmake_clang_format: 0.12.14 (/opt/ros/humble/share/ament_cmake_clang_format/cmake)
+-- Found ament_cmake_xmllint: 0.12.14 (/opt/ros/humble/share/ament_cmake_xmllint/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver
+[35m[1mConsolidate compiler generated dependencies of target camera_driver[0m
+[ 81%] Built target camera_driver
+[35m[1mConsolidate compiler generated dependencies of target camera_driver_node[0m
+[100%] Built target camera_driver_node
+-- Install configuration: "RelWithDebInfo"
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/spinnaker_camera_driver/camera_driver_node
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/libcamera_driver.so
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/cmake/spinnaker_camera_driver/spinnaker_camera_driverTargets.cmake
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/cmake/spinnaker_camera_driver/spinnaker_camera_driverTargets-relwithdebinfo.cmake
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/cmake/spinnaker_camera_driver/spinnaker_camera_driverConfig.cmake
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/cmake/spinnaker_camera_driver/spinnaker_camera_driverConfigVersion.cmake
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/lifecycle_types.hpp
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/exposure_controller.hpp
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/spinnaker_wrapper.hpp
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/pixel_format.hpp
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/logging.hpp
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/image.hpp
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/camera.hpp
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/camera_driver.hpp
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/diagnostic_levels.hpp
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/synchronizer.hpp
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/utils.hpp
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/flir_ax5.yaml
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/blackfly.yaml
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/chameleon.yaml
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/grasshopper.yaml
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/oryx.yaml
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/firefly_ffy_u3162c.yaml
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/firefly.yaml
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/blackfly_s.yaml
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//launch
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//launch/multiple_cameras_ptp.launch.py
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//launch/multiple_cameras.launch.py
+-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//launch/get_serial.py
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//launch/gige_node.launch.py
+-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//launch/driver_node.launch.py
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/spinnaker_camera_driver/linux_setup_flir
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/launch/get_serial.py
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/ament_index/resource_index/package_run_dependencies/spinnaker_camera_driver
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/ament_index/resource_index/parent_prefix_path/spinnaker_camera_driver
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/environment/ament_prefix_path.sh
+-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/environment/path.sh
+-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/environment/path.dsv
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/local_setup.bash
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/local_setup.sh
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/local_setup.zsh
+-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/local_setup.dsv
+-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/package.dsv
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/ament_index/resource_index/packages/spinnaker_camera_driver
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/ament_index/resource_index/rclcpp_components/spinnaker_camera_driver
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/cmake/spinnaker_camera_driverConfig.cmake
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/cmake/spinnaker_camera_driverConfig-version.cmake
+-- Up-to-date: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/package.xml

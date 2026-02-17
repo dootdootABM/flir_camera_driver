@@ -83,206 +83,212 @@
 				"parent" : 0
 			},
 			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 206,
+				"parent" : 0
+			},
+			{
 				"command" : 5,
 				"file" : 0,
-				"line" : 228,
+				"line" : 234,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 4,
 				"line" : 66,
-				"parent" : 9
+				"parent" : 10
 			},
 			{
 				"command" : 3,
 				"file" : 3,
 				"line" : 48,
-				"parent" : 10
+				"parent" : 11
 			},
 			{
 				"file" : 2,
-				"parent" : 11
+				"parent" : 12
 			},
 			{
 				"command" : 2,
 				"file" : 2,
 				"line" : 47,
-				"parent" : 12
+				"parent" : 13
 			},
 			{
 				"command" : 1,
 				"file" : 2,
 				"line" : 29,
-				"parent" : 13
+				"parent" : 14
 			},
 			{
 				"command" : 0,
 				"file" : 1,
 				"line" : 105,
-				"parent" : 14
+				"parent" : 15
 			},
 			{
 				"command" : 6,
 				"file" : 2,
 				"line" : 48,
-				"parent" : 12
+				"parent" : 13
 			},
 			{
 				"command" : 1,
 				"file" : 2,
 				"line" : 43,
-				"parent" : 16
+				"parent" : 17
 			},
 			{
 				"command" : 0,
 				"file" : 1,
 				"line" : 105,
-				"parent" : 17
+				"parent" : 18
 			},
 			{
 				"command" : 3,
 				"file" : 3,
 				"line" : 48,
-				"parent" : 10
+				"parent" : 11
 			},
 			{
 				"file" : 6,
-				"parent" : 19
+				"parent" : 20
 			},
 			{
 				"command" : 7,
 				"file" : 6,
 				"line" : 20,
-				"parent" : 20
-			},
-			{
-				"command" : 0,
-				"file" : 5,
-				"line" : 70,
-				"parent" : 21
-			},
-			{
-				"command" : 0,
-				"file" : 5,
-				"line" : 87,
 				"parent" : 21
 			},
 			{
 				"command" : 0,
 				"file" : 5,
 				"line" : 70,
-				"parent" : 21
+				"parent" : 22
 			},
 			{
 				"command" : 0,
 				"file" : 5,
 				"line" : 87,
-				"parent" : 21
+				"parent" : 22
+			},
+			{
+				"command" : 0,
+				"file" : 5,
+				"line" : 70,
+				"parent" : 22
+			},
+			{
+				"command" : 0,
+				"file" : 5,
+				"line" : 87,
+				"parent" : 22
 			},
 			{
 				"command" : 8,
 				"file" : 6,
 				"line" : 26,
-				"parent" : 20
+				"parent" : 21
 			},
 			{
 				"command" : 0,
 				"file" : 7,
 				"line" : 91,
-				"parent" : 26
+				"parent" : 27
 			},
 			{
 				"command" : 0,
 				"file" : 7,
 				"line" : 91,
-				"parent" : 26
+				"parent" : 27
 			},
 			{
 				"command" : 0,
 				"file" : 7,
 				"line" : 91,
-				"parent" : 26
+				"parent" : 27
 			},
 			{
 				"command" : 0,
 				"file" : 7,
 				"line" : 107,
-				"parent" : 26
+				"parent" : 27
 			},
 			{
 				"command" : 0,
 				"file" : 7,
 				"line" : 119,
-				"parent" : 26
+				"parent" : 27
 			},
 			{
 				"command" : 3,
 				"file" : 3,
 				"line" : 48,
-				"parent" : 10
+				"parent" : 11
 			},
 			{
 				"file" : 9,
-				"parent" : 32
+				"parent" : 33
 			},
 			{
 				"command" : 9,
 				"file" : 9,
 				"line" : 16,
-				"parent" : 33
+				"parent" : 34
 			},
 			{
 				"command" : 1,
 				"file" : 8,
 				"line" : 29,
-				"parent" : 34
+				"parent" : 35
 			},
 			{
 				"command" : 0,
 				"file" : 1,
 				"line" : 105,
-				"parent" : 35
+				"parent" : 36
 			},
 			{
 				"command" : 3,
 				"file" : 3,
 				"line" : 48,
-				"parent" : 10
+				"parent" : 11
 			},
 			{
 				"file" : 10,
-				"parent" : 37
+				"parent" : 38
 			},
 			{
 				"command" : 1,
 				"file" : 10,
 				"line" : 18,
-				"parent" : 38
+				"parent" : 39
 			},
 			{
 				"command" : 0,
 				"file" : 1,
 				"line" : 105,
-				"parent" : 39
+				"parent" : 40
 			},
 			{
 				"command" : 10,
 				"file" : 4,
 				"line" : 68,
-				"parent" : 9
+				"parent" : 10
 			},
 			{
 				"command" : 0,
 				"file" : 4,
 				"line" : 150,
-				"parent" : 41
+				"parent" : 42
 			},
 			{
 				"command" : 0,
 				"file" : 4,
 				"line" : 157,
-				"parent" : 41
+				"parent" : 42
 			}
 		]
 	},
@@ -385,7 +391,17 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 15,
+			"backtrace" : 9,
+			"component" : "Unspecified",
+			"destination" : "share/spinnaker_camera_driver/launch",
+			"paths" : 
+			[
+				"launch/get_serial.py"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 16,
 			"component" : "Unspecified",
 			"destination" : "share/ament_index/resource_index/package_run_dependencies",
 			"paths" : 
@@ -395,7 +411,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 18,
+			"backtrace" : 19,
 			"component" : "Unspecified",
 			"destination" : "share/ament_index/resource_index/parent_prefix_path",
 			"paths" : 
@@ -405,7 +421,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 22,
+			"backtrace" : 23,
 			"component" : "Unspecified",
 			"destination" : "share/spinnaker_camera_driver/environment",
 			"paths" : 
@@ -415,7 +431,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 23,
+			"backtrace" : 24,
 			"component" : "Unspecified",
 			"destination" : "share/spinnaker_camera_driver/environment",
 			"paths" : 
@@ -425,7 +441,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 24,
+			"backtrace" : 25,
 			"component" : "Unspecified",
 			"destination" : "share/spinnaker_camera_driver/environment",
 			"paths" : 
@@ -435,7 +451,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 25,
+			"backtrace" : 26,
 			"component" : "Unspecified",
 			"destination" : "share/spinnaker_camera_driver/environment",
 			"paths" : 
@@ -445,7 +461,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 27,
+			"backtrace" : 28,
 			"component" : "Unspecified",
 			"destination" : "share/spinnaker_camera_driver",
 			"paths" : 
@@ -455,7 +471,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 28,
+			"backtrace" : 29,
 			"component" : "Unspecified",
 			"destination" : "share/spinnaker_camera_driver",
 			"paths" : 
@@ -465,7 +481,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 29,
+			"backtrace" : 30,
 			"component" : "Unspecified",
 			"destination" : "share/spinnaker_camera_driver",
 			"paths" : 
@@ -475,7 +491,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 30,
+			"backtrace" : 31,
 			"component" : "Unspecified",
 			"destination" : "share/spinnaker_camera_driver",
 			"paths" : 
@@ -485,7 +501,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 31,
+			"backtrace" : 32,
 			"component" : "Unspecified",
 			"destination" : "share/spinnaker_camera_driver",
 			"paths" : 
@@ -495,7 +511,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 36,
+			"backtrace" : 37,
 			"component" : "Unspecified",
 			"destination" : "share/ament_index/resource_index/packages",
 			"paths" : 
@@ -505,7 +521,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 40,
+			"backtrace" : 41,
 			"component" : "Unspecified",
 			"destination" : "share/ament_index/resource_index/rclcpp_components",
 			"paths" : 
@@ -515,7 +531,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 42,
+			"backtrace" : 43,
 			"component" : "Unspecified",
 			"destination" : "share/spinnaker_camera_driver/cmake",
 			"paths" : 
@@ -526,7 +542,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 43,
+			"backtrace" : 44,
 			"component" : "Unspecified",
 			"destination" : "share/spinnaker_camera_driver",
 			"paths" : 

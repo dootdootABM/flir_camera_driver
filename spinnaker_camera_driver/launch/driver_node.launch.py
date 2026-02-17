@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import os
-import re
+import subprocess
 
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument as LaunchArg
@@ -11,41 +11,29 @@ from launch.substitutions import PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 
-
-def get_camera_serial_numbers():
-    serials = []
+def get_serial_from_helper():
     try:
-        if os.path.exists("/dev/v4l/by-id"):
-            for name in os.listdir("/dev/v4l/by-id"):
-                if ("FLIR" in name) or ("Firefly" in name) or ("Blackfly" in name):
-                    m = re.search(r"[-_](\d{7,9})[-_]", name)
-                    if m:
-                        s = m.group(1)
-                        if s not in serials:
-                            serials.append(s)
-    except Exception:
-        pass
-    
-    if not serials:
-        try:
-            import subprocess
-            result = subprocess.run(
-                ["v4l2-ctl", "--list-devices"],
-                capture_output=True,
-                text=True,
-                timeout=2,
-            )
-            for line in result.stdout.split("\n"):
-                if ("FLIR" in line) or ("Firefly" in line):
-                    m = re.search(r"(\d{7,9})", line)
-                    if m:
-                        serials.append(m.group(1))
-        except Exception:
-            pass
-            
-    return serials
+        # Assuming script is in same dir as launch file
+        script_path = os.path.join(os.path.dirname(__file__), 'get_serial.py')
+        
+        # If not found (installed location differs), try package share
+        if not os.path.exists(script_path):
+             share_dir = FindPackageShare("spinnaker_camera_driver").find("spinnaker_camera_driver")
+             script_path = os.path.join(share_dir, "launch", "get_serial.py")
 
+        result = subprocess.run(
+            [script_path],
+            capture_output=True,
+            text=True,
+            timeout=5
+        )
+        if result.returncode == 0:
+            return result.stdout.strip()
+    except Exception as e:
+        print(f"Helper script failed: {e}")
+    return None
 
+# ... (EXAMPLE_PARAMETERS same as before) ...
 EXAMPLE_PARAMETERS = {
     "firefly": {
         "debug": False,
@@ -67,7 +55,6 @@ EXAMPLE_PARAMETERS = {
     "blackfly": {"exposure_auto": "Off", "balance_white_auto": "Continuous"},
 }
 
-
 def launch_setup(context, *args, **kwargs):
     camera_type = LaunchConfig("camera_type").perform(context)
     serial_arg = LaunchConfig("serial").perform(context)
@@ -81,18 +68,19 @@ def launch_setup(context, *args, **kwargs):
     fps = float(LaunchConfig("fps").perform(context))
     decimation = int(LaunchConfig("decimation").perform(context))
 
+    serial = "0"
     if serial_arg == "auto":
-        serials = get_camera_serial_numbers()
-        if serials:
-            serial = serials[0]
+        detected = get_serial_from_helper()
+        if detected:
+            serial = detected
             print(f"Auto-detected camera serial: {serial}")
         else:
+            print("Auto-detect failed. Defaulting to '0'")
             serial = "0"
-            print("No camera found! Defaulting to '0'")
     else:
         serial = serial_arg.strip("'\"")
 
-    # Force Full Resolution Capture
+    # Force Full Resolution
     cap_w = 1440
     cap_h = 1080
 
@@ -127,7 +115,7 @@ def launch_setup(context, *args, **kwargs):
     else:
         parameter_file = parameter_file_arg
 
-    nodes = []  # <--- Initialization added here
+    nodes = []
 
     # 1. Camera Driver
     nodes.append(Node(

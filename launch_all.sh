@@ -3,7 +3,7 @@
 # Configuration
 WORKSPACE_DIR="/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver"
 CAMERA_TYPE="firefly"
-SERIAL="24364301"
+SERIAL="auto"
 
 # --- Camera Parameters ---
 # Exposure: "Off" (Manual) or "Continuous" (Auto)

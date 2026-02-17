@@ -203,6 +203,12 @@ install(PROGRAMS
   DESTINATION lib/${PROJECT_NAME}
 )
 
+install(PROGRAMS
+  launch/get_serial.py
+  DESTINATION share/${PROJECT_NAME}/launch
+)
+
+
 
 if(BUILD_TESTING)
   find_package(ament_cmake REQUIRED)
