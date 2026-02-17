@@ -61,16 +61,10 @@ def launch_setup(context, *args, **kwargs):
     else:
         serial = serial_arg.strip("'\"")
 
-    # Force 640x480 Center Crop
-    # Full sensor is 1440x1080 (Firefly)
-    # Target: 640x480
-    # Offset X = (1440 - 640) / 2 = 400
-    # Offset Y = (1080 - 480) / 2 = 300
-    
-    cap_w = 640
-    cap_h = 480
-    off_x = 400
-    off_y = 300
+    # Force Full Resolution Capture (1440x1080)
+    # We will downsample later in software.
+    cap_w = 1440
+    cap_h = 1080
 
     if camera_type in EXAMPLE_PARAMETERS:
         camera_params = EXAMPLE_PARAMETERS[camera_type].copy()
@@ -81,8 +75,8 @@ def launch_setup(context, *args, **kwargs):
         {
             "image_width": cap_w,
             "image_height": cap_h,
-            "offset_x": off_x,
-            "offset_y": off_y,
+            "offset_x": 0,
+            "offset_y": 0,
             "binning_x": 1,
             "binning_y": 1,
         }
@@ -96,25 +90,54 @@ def launch_setup(context, *args, **kwargs):
     else:
         parameter_file = parameter_file_arg
 
-    nodes = [
-        Node(
-            package="spinnaker_camera_driver",
-            executable="camera_driver_node",
-            output="screen",
-            name=camera_name,
-            parameters=[
-                camera_params,
-                {
-                    "parameter_file": parameter_file,
-                    "serial_number": serial,
-                    "ffmpeg_image_transport.encoding": "hevc_nvenc",
-                },
-            ],
-            remappings=[
-                ("~/control", "/exposure_control/control"),
-            ],
-        )
-    ]
+    nodes = []
+
+    # 1. Camera Driver (Full Res)
+    # Publishes to: /flir_camera/image_raw
+    nodes.append(Node(
+        package="spinnaker_camera_driver",
+        executable="camera_driver_node",
+        output="screen",
+        name=camera_name,
+        parameters=[
+            camera_params,
+            {
+                "parameter_file": parameter_file,
+                "serial_number": serial,
+                "ffmpeg_image_transport.encoding": "hevc_nvenc",
+            },
+        ],
+        remappings=[
+            ("~/control", "/exposure_control/control"),
+        ],
+    ))
+
+    # 2. Decimator Node (Software Binning)
+    # Takes /flir_camera/image_raw -> /flir_camera/decimated/image_raw
+    # Result: 720x540 (Full FOV)
+    nodes.append(Node(
+        package="image_proc",
+        executable="crop_decimate_node",
+        name="decimator",
+        namespace=camera_name,
+        parameters=[{
+            "decimation_x": 2,
+            "decimation_y": 2,
+            "x_offset": 0,
+            "y_offset": 0,
+            "width": 0,
+            "height": 0,
+        }],
+        remappings=[
+            # Remap input (default is 'in/image_raw') to actual driver topic
+            ("in/image_raw", "image_raw"),
+            ("in/camera_info", "camera_info"),
+            
+            # Remap output (default is 'out/image_raw') to desired topic
+            ("out/image_raw", "decimated/image_raw"),
+            ("out/camera_info", "decimated/camera_info"),
+        ],
+    ))
 
     return nodes
 
@@ -126,7 +149,6 @@ def generate_launch_description():
             LaunchArg("camera_type", default_value="firefly"),
             LaunchArg("serial", default_value="auto"),
             LaunchArg("parameter_file", default_value=""),
-            # Width/Height args are ignored here as we hardcoded center crop
             OpaqueFunction(function=launch_setup),
         ]
     )

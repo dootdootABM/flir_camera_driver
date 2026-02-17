@@ -171,7 +171,7 @@ camera_driver_node: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so
 camera_driver_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
 camera_driver_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
 camera_driver_node: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
-camera_driver_node: /opt/ros/humble/lib/libfastcdr.so.1.0.24
+camera_driver_node: /opt/ros/humble/lib/libfastcdr.so.1.0.29
 camera_driver_node: /opt/ros/humble/lib/librmw.so
 camera_driver_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
 camera_driver_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so

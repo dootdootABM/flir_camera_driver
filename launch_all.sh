@@ -47,6 +47,7 @@ echo "---------------------------------------"
 echo "Driver running with PID: $DRIVER_PID"
 echo "Monitor topic rate with: ros2 topic hz /flir_camera/image_raw"
 echo "Monitor resolution with: ros2 topic echo --once /flir_camera/image_raw | grep -E 'width|height'"
+echo "Monitor image with: ros2 run image_tools showimage --ros-args \ -r image:=/flir_camera/decimated/image_raw \ -p reliability:=best_effort"
 echo "Press Ctrl+C to stop."
 
 # Wait for user interrupt
