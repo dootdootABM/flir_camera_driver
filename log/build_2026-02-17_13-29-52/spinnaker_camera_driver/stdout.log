@@ -54,9 +54,9 @@
 -- Build files have been written to: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver
 [  9%] [32mBuilding CXX object CMakeFiles/camera_driver.dir/src/camera_driver.cpp.o[0m
 [ 18%] [32mBuilding CXX object CMakeFiles/camera_driver.dir/src/camera.cpp.o[0m
-[ 27%] [32mBuilding CXX object CMakeFiles/camera_driver.dir/src/image.cpp.o[0m
-[ 36%] [32mBuilding CXX object CMakeFiles/camera_driver.dir/src/spinnaker_wrapper_impl.cpp.o[0m
-[ 45%] [32mBuilding CXX object CMakeFiles/camera_driver.dir/src/spinnaker_wrapper.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/camera_driver.dir/src/spinnaker_wrapper_impl.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/camera_driver.dir/src/spinnaker_wrapper.cpp.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/camera_driver.dir/src/image.cpp.o[0m
 [ 54%] [32mBuilding CXX object CMakeFiles/camera_driver.dir/src/pixel_format.cpp.o[0m
 [ 63%] [32mBuilding CXX object CMakeFiles/camera_driver.dir/src/genicam_utils.cpp.o[0m
 [ 72%] [32mBuilding CXX object CMakeFiles/camera_driver.dir/src/utils.cpp.o[0m

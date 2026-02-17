@@ -5,7 +5,7 @@ WORKSPACE_DIR="/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver"
 CAMERA_TYPE="firefly"
 SERIAL="24364301"
 IMAGE_WIDTH="640"
-IMAGE_HEIGHT="144"
+IMAGE_HEIGHT="480"
 
 echo "---------------------------------------"
 echo "Stopping existing processes..."

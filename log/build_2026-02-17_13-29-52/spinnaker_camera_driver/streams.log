@@ -1,0 +1,122 @@
+[0.006s] Invoking command in '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver': CMAKE_PREFIX_PATH=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs:/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver:/opt/ros/humble LD_LIBRARY_PATH=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/lib:/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/spinnaker_camera_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver
+[0.034s] -- The C compiler identification is GNU 11.4.0
+[0.061s] -- The CXX compiler identification is GNU 11.4.0
+[0.065s] -- Detecting C compiler ABI info
+[0.098s] -- Detecting C compiler ABI info - done
+[0.102s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.102s] -- Detecting C compile features
+[0.102s] -- Detecting C compile features - done
+[0.103s] -- Detecting CXX compiler ABI info
+[0.143s] -- Detecting CXX compiler ABI info - done
+[0.146s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.147s] -- Detecting CXX compile features
+[0.147s] -- Detecting CXX compile features - done
+[0.149s] -- Found inc dir: /opt/spinnaker/include
+[0.149s] -- Found variable: TRUE at /opt/spinnaker/lib/libSpinnaker.so and /opt/spinnaker/include
+[0.149s] -- spinnaker SDK found installed
+[0.149s] -- libSpinnaker library location: /opt/spinnaker/lib/libSpinnaker.so
+[0.149s] -- libSpinnaker include location: /opt/spinnaker/include
+[0.149s] -- Found inc dir: /opt/spinnaker/include
+[0.149s] -- Found SPINNAKER: /opt/spinnaker/include  
+[0.150s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.226s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.255s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.265s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.267s] -- Found camera_info_manager: 3.1.12 (/opt/ros/humble/share/camera_info_manager/cmake)
+[0.284s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.286s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.289s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.294s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.300s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.316s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.317s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.365s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.379s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.402s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.405s] -- Looking for pthread.h
+[0.442s] -- Looking for pthread.h - found
+[0.442s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.478s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.479s] -- Found Threads: TRUE  
+[0.517s] -- Found diagnostic_updater: 4.0.6 (/opt/ros/humble/share/diagnostic_updater/cmake)
+[0.524s] -- Found flir_camera_msgs: 2.0.8 (/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/share/flir_camera_msgs/cmake)
+[0.530s] -- Found image_transport: 3.1.12 (/opt/ros/humble/share/image_transport/cmake)
+[0.542s] -- Found rclcpp_components: 16.0.16 (/opt/ros/humble/share/rclcpp_components/cmake)
+[0.550s] -- Found ament_cmake_copyright: 0.12.14 (/opt/ros/humble/share/ament_cmake_copyright/cmake)
+[0.550s] -- Found ament_cmake_cppcheck: 0.12.14 (/opt/ros/humble/share/ament_cmake_cppcheck/cmake)
+[0.551s] -- Found ament_cmake_cpplint: 0.12.14 (/opt/ros/humble/share/ament_cmake_cpplint/cmake)
+[0.551s] -- Found ament_cmake_flake8: 0.12.14 (/opt/ros/humble/share/ament_cmake_flake8/cmake)
+[0.552s] -- Found ament_cmake_lint_cmake: 0.12.14 (/opt/ros/humble/share/ament_cmake_lint_cmake/cmake)
+[0.552s] -- Found ament_cmake_pep257: 0.12.14 (/opt/ros/humble/share/ament_cmake_pep257/cmake)
+[0.553s] -- Found ament_cmake_clang_format: 0.12.14 (/opt/ros/humble/share/ament_cmake_clang_format/cmake)
+[0.553s] -- Found ament_cmake_xmllint: 0.12.14 (/opt/ros/humble/share/ament_cmake_xmllint/cmake)
+[0.592s] -- Configuring done
+[0.599s] -- Generating done
+[0.601s] -- Build files have been written to: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver
+[0.609s] Invoked command in '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver' returned '0': CMAKE_PREFIX_PATH=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs:/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver:/opt/ros/humble LD_LIBRARY_PATH=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/lib:/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/spinnaker_camera_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver
+[0.610s] Invoking command in '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver': CMAKE_PREFIX_PATH=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs:/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver:/opt/ros/humble LD_LIBRARY_PATH=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/lib:/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver -- -j128 -l128
+[0.637s] [  9%] [32mBuilding CXX object CMakeFiles/camera_driver.dir/src/camera_driver.cpp.o[0m
+[0.637s] [ 18%] [32mBuilding CXX object CMakeFiles/camera_driver.dir/src/camera.cpp.o[0m
+[0.637s] [ 27%] [32mBuilding CXX object CMakeFiles/camera_driver.dir/src/spinnaker_wrapper_impl.cpp.o[0m
+[0.637s] [ 36%] [32mBuilding CXX object CMakeFiles/camera_driver.dir/src/spinnaker_wrapper.cpp.o[0m
+[0.637s] [ 45%] [32mBuilding CXX object CMakeFiles/camera_driver.dir/src/image.cpp.o[0m
+[0.638s] [ 54%] [32mBuilding CXX object CMakeFiles/camera_driver.dir/src/pixel_format.cpp.o[0m
+[0.638s] [ 63%] [32mBuilding CXX object CMakeFiles/camera_driver.dir/src/genicam_utils.cpp.o[0m
+[0.638s] [ 72%] [32mBuilding CXX object CMakeFiles/camera_driver.dir/src/utils.cpp.o[0m
+[12.759s] [ 81%] [32m[1mLinking CXX shared library libcamera_driver.so[0m
+[12.967s] [ 81%] Built target camera_driver
+[12.978s] [ 90%] [32mBuilding CXX object CMakeFiles/camera_driver_node.dir/src/camera_driver_node.cpp.o[0m
+[15.239s] [100%] [32m[1mLinking CXX executable camera_driver_node[0m
+[15.312s] [100%] Built target camera_driver_node
+[15.324s] Invoked command in '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver' returned '0': CMAKE_PREFIX_PATH=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs:/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver:/opt/ros/humble LD_LIBRARY_PATH=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/lib:/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver -- -j128 -l128
+[15.325s] Invoking command in '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver': CMAKE_PREFIX_PATH=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs:/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver:/opt/ros/humble LD_LIBRARY_PATH=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/lib:/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver
+[15.329s] -- Install configuration: "RelWithDebInfo"
+[15.329s] -- Execute custom install script
+[15.329s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/spinnaker_camera_driver//camera_driver_node
+[15.334s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/cmake/spinnaker_camera_driver/spinnaker_camera_driverConfig.cmake
+[15.337s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/cmake/spinnaker_camera_driver/spinnaker_camera_driverConfigVersion.cmake
+[15.342s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/camera.hpp
+[15.345s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/camera_driver.hpp
+[15.349s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/diagnostic_levels.hpp
+[15.353s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/exposure_controller.hpp
+[15.358s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/image.hpp
+[15.361s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/lifecycle_types.hpp
+[15.365s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/logging.hpp
+[15.369s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/pixel_format.hpp
+[15.373s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/spinnaker_wrapper.hpp
+[15.378s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/synchronizer.hpp
+[15.381s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/utils.hpp
+[15.386s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/blackfly.yaml
+[15.390s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/blackfly_s.yaml
+[15.393s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/chameleon.yaml
+[15.398s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/firefly.yaml
+[15.402s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/firefly_ffy_u3162c.yaml
+[15.405s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/flir_ax5.yaml
+[15.409s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/grasshopper.yaml
+[15.413s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/oryx.yaml
+[15.417s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//launch/driver_node.launch.py
+[15.421s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//launch/gige_node.launch.py
+[15.425s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//launch/multiple_cameras.launch.py
+[15.429s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//launch/multiple_cameras_ptp.launch.py
+[15.433s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/spinnaker_camera_driver/linux_setup_flir
+[15.438s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/ament_index/resource_index/package_run_dependencies/spinnaker_camera_driver
+[15.443s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/ament_index/resource_index/parent_prefix_path/spinnaker_camera_driver
+[15.447s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/environment/ament_prefix_path.sh
+[15.451s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/environment/ament_prefix_path.dsv
+[15.455s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/environment/path.sh
+[15.458s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/environment/path.dsv
+[15.462s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/local_setup.bash
+[15.466s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/local_setup.sh
+[15.470s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/local_setup.zsh
+[15.473s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/local_setup.dsv
+[15.477s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/package.dsv
+[15.482s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/ament_index/resource_index/packages/spinnaker_camera_driver
+[15.485s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/ament_index/resource_index/rclcpp_components/spinnaker_camera_driver
+[15.489s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/cmake/spinnaker_camera_driverConfig.cmake
+[15.493s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/cmake/spinnaker_camera_driverConfig-version.cmake
+[15.497s] -- Symlinking: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/package.xml
+[15.501s] -- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/libcamera_driver.so
+[15.509s] -- Set runtime path of "/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/libcamera_driver.so" to ""
+[15.509s] -- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/cmake/spinnaker_camera_driver/spinnaker_camera_driverTargets.cmake
+[15.510s] -- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/cmake/spinnaker_camera_driver/spinnaker_camera_driverTargets-relwithdebinfo.cmake
+[15.512s] Invoked command in '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver' returned '0': CMAKE_PREFIX_PATH=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs:/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver:/opt/ros/humble LD_LIBRARY_PATH=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs/lib:/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver

@@ -35,11 +35,13 @@ class CameraControlPanel(Node):
         
         self.root = tk.Tk()
         self.root.title("FLIR Camera Control")
-        self.root.geometry("800x900")
+        self.root.geometry("900x750")
+        
         self.gui_queue = queue.Queue()
+        self.first_image = True
         
         self.create_widgets()
-        self.root.after(100, self.process_queue)
+        self.root.after(16, self.process_queue)
         threading.Thread(target=self.initial_load, daemon=True).start()
     
     def create_widgets(self):
@@ -52,8 +54,8 @@ class CameraControlPanel(Node):
         video_frame = ttk.LabelFrame(content, text="Live Feed (Resized)", padding=5)
         video_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True, padx=5, pady=5)
         
-        self.video_label = ttk.Label(video_frame, text="Waiting for image...")
-        self.video_label.pack(fill=tk.BOTH, expand=True)
+        self.canvas = tk.Canvas(video_frame, width=880, height=500, bg='black', highlightthickness=0)
+        self.canvas.pack(fill=tk.BOTH, expand=True)
         
         param_grid = ttk.Frame(controls_frame)
         param_grid.pack(side=tk.TOP, fill=tk.X)
@@ -105,48 +107,73 @@ class CameraControlPanel(Node):
         self.fps_entry.pack(fill=tk.X)
         self.fps_entry.bind('<Return>', self.set_fps_manual)
         
+        wb_frame = ttk.LabelFrame(param_grid, text="White Balance", padding=5)
+        wb_frame.grid(row=0, column=3, sticky="nsew", padx=2)
+        
+        self.wb_auto_var = tk.StringVar(value="Continuous")
+        ttk.Checkbutton(wb_frame, text="Auto", variable=self.wb_auto_var,
+                       onvalue="Continuous", offvalue="Off",
+                       command=self.set_wb_auto).pack(anchor=tk.W)
+        
         self.status_label = ttk.Label(controls_frame, text="Status: Ready", wraplength=780)
         self.status_label.pack(side=tk.BOTTOM, pady=5)
         
         param_grid.columnconfigure(0, weight=1)
         param_grid.columnconfigure(1, weight=1)
         param_grid.columnconfigure(2, weight=1)
+        param_grid.columnconfigure(3, weight=1)
         
         self.exposure_timer = None
         self.gain_timer = None
         self.fps_timer = None
     
     def process_queue(self):
+        count = 0
         try:
-            while True:
+            while count < 5:
                 task = self.gui_queue.get_nowait()
                 task()
+                count += 1
         except queue.Empty:
             pass
         finally:
-            self.root.after(20, self.process_queue)
+            self.root.after(16, self.process_queue)
     
     def image_callback(self, msg):
         try:
             cv_img = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
-            
-            display_h = 480
             h, w = cv_img.shape[:2]
-            scale = display_h / float(h)
-            display_w = int(w * scale)
             
-            cv_img_small = cv2.resize(cv_img, (display_w, display_h))
-            cv_img_rgb = cv2.cvtColor(cv_img_small, cv2.COLOR_BGR2RGB)
+            if self.first_image:
+                self.first_image = False
+                self.send_driver_param('balance_white_auto', 'Continuous', ParameterType.PARAMETER_STRING)
+            
+            canvas_w = 880
+            canvas_h = 500
+            
+            scale_w = canvas_w / float(w)
+            scale_h = canvas_h / float(h)
+            scale = min(scale_w, scale_h)
+            
+            new_w = int(w * scale)
+            new_h = int(h * scale)
+            
+            cv_img_resized = cv2.resize(cv_img, (new_w, new_h), interpolation=cv2.INTER_LINEAR)
+            cv_img_rgb = cv2.cvtColor(cv_img_resized, cv2.COLOR_BGR2RGB)
             pil_img = PILImage.fromarray(cv_img_rgb)
+            tk_img = ImageTk.PhotoImage(image=pil_img)
             
-            self.gui_queue.put(lambda: self.update_video_label(pil_img))
+            x_offset = (canvas_w - new_w) // 2
+            y_offset = (canvas_h - new_h) // 2
+            
+            self.gui_queue.put(lambda img=tk_img, x=x_offset, y=y_offset: self.update_canvas(img, x, y))
         except Exception:
             pass
     
-    def update_video_label(self, pil_img):
-        tk_img = ImageTk.PhotoImage(image=pil_img)
-        self.video_label.configure(image=tk_img, text="")
-        self.video_label.image = tk_img
+    def update_canvas(self, tk_img, x, y):
+        self.canvas.delete("all")
+        self.canvas.create_image(x, y, anchor=tk.NW, image=tk_img)
+        self.canvas.image = tk_img
     
     def initial_load(self):
         if not self.client_driver.wait_for_service(timeout_sec=2.0):
@@ -241,6 +268,9 @@ class CameraControlPanel(Node):
             self.send_driver_param('frame_rate', val, ParameterType.PARAMETER_DOUBLE)
         except ValueError:
             pass
+    
+    def set_wb_auto(self):
+        self.send_driver_param('balance_white_auto', self.wb_auto_var.get(), ParameterType.PARAMETER_STRING)
     
     def run(self):
         while rclpy.ok():
