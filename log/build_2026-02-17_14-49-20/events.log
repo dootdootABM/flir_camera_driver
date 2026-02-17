@@ -1,0 +1,292 @@
+[0.000000] (-) TimerEvent: {}
+[0.000502] (-) JobUnselected: {'identifier': 'flir_camera_description'}
+[0.000532] (-) JobUnselected: {'identifier': 'flir_camera_msgs'}
+[0.000547] (-) JobUnselected: {'identifier': 'spinnaker_synchronized_camera_driver'}
+[0.000565] (spinnaker_camera_driver) JobQueued: {'identifier': 'spinnaker_camera_driver', 'dependencies': OrderedDict([('flir_camera_msgs', '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/flir_camera_msgs')])}
+[0.000588] (spinnaker_camera_driver) JobStarted: {'identifier': 'spinnaker_camera_driver'}
+[0.004281] (spinnaker_camera_driver) JobProgress: {'identifier': 'spinnaker_camera_driver', 'progress': 'cmake'}
+[0.004708] (spinnaker_camera_driver) Command: {'cmd': ['/usr/bin/cmake', '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/spinnaker_camera_driver', '-DCMAKE_INSTALL_PREFIX=/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver'], 'cwd': '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'karthik'), ('LC_TIME', 'de_DE.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/antigravity/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('ANTIGRAVITY_CLI_ALIAS', 'agy'), ('HOME', '/home/karthik'), ('CHROME_DESKTOP', 'antigravity.desktop'), ('OLDPWD', '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver'), ('TERM_PROGRAM_VERSION', '1.104.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/antigravity.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/antigravity/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'de_DE.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/antigravity/antigravity'), ('MANAGERPID', '3174'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '3437'), ('BUNDLED_DEBUGPY_PATH', '/home/karthik/.antigravity/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5610'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'karthik'), ('JOURNAL_STREAM', '8:80912'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'karthik'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/karthik/.local/bin:/home/karthik/.local/bin:/opt/spinnaker/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/karthik/.antigravity/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/Karthik:@/tmp/.ICE-unix/3414,unix/Karthik:/tmp/.ICE-unix/3414'), ('INVOCATION_ID', '8c000bce77184e7abaf8e7054f526e83'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('SPINNAKER_GENTL64_CTI', '/opt/spinnaker/lib/spinnaker-gentl/Spinnaker_GenTL.cti'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/karthik/.antigravity/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-f3ee66c29dd09338.txt'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('PYTHONSTARTUP', '/home/karthik/.config/Antigravity/User/workspaceStorage/d88c120b86d835b02216619077cb693b/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-305ff7234e.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('GENICAM_GENTL64_PATH', '/opt/spinnaker/lib/spinnaker-gentl'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.035359] (spinnaker_camera_driver) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.062869] (spinnaker_camera_driver) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.066383] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.099796] (-) TimerEvent: {}
+[0.101085] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.104192] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.104316] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.104498] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.105854] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.145535] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.149439] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.149603] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.149884] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.151534] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found inc dir: /opt/spinnaker/include\n'}
+[0.151663] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found variable: TRUE at /opt/spinnaker/lib/libSpinnaker.so and /opt/spinnaker/include\n'}
+[0.151691] (spinnaker_camera_driver) StdoutLine: {'line': b'-- spinnaker SDK found installed\n'}
+[0.151708] (spinnaker_camera_driver) StdoutLine: {'line': b'-- libSpinnaker library location: /opt/spinnaker/lib/libSpinnaker.so\n'}
+[0.151726] (spinnaker_camera_driver) StdoutLine: {'line': b'-- libSpinnaker include location: /opt/spinnaker/include\n'}
+[0.151958] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found inc dir: /opt/spinnaker/include\n'}
+[0.152018] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found SPINNAKER: /opt/spinnaker/include  \n'}
+[0.152530] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.199857] (-) TimerEvent: {}
+[0.226012] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.263548] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.266014] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found camera_info_manager: 3.1.12 (/opt/ros/humble/share/camera_info_manager/cmake)\n'}
+[0.283080] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.284567] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.288360] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.292651] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.298052] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.299914] (-) TimerEvent: {}
+[0.312706] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.313468] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.362554] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.375993] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.398748] (spinnaker_camera_driver) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.399972] (-) TimerEvent: {}
+[0.401880] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.439466] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.439573] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.476256] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.476912] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.500027] (-) TimerEvent: {}
+[0.512802] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found diagnostic_updater: 4.0.6 (/opt/ros/humble/share/diagnostic_updater/cmake)\n'}
+[0.520455] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found flir_camera_msgs: 3.0.4 (/opt/ros/humble/share/flir_camera_msgs/cmake)\n'}
+[0.525966] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found image_transport: 3.1.12 (/opt/ros/humble/share/image_transport/cmake)\n'}
+[0.538003] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found rclcpp_components: 16.0.17 (/opt/ros/humble/share/rclcpp_components/cmake)\n'}
+[0.545449] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found ament_cmake_copyright: 0.12.14 (/opt/ros/humble/share/ament_cmake_copyright/cmake)\n'}
+[0.545934] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found ament_cmake_cppcheck: 0.12.14 (/opt/ros/humble/share/ament_cmake_cppcheck/cmake)\n'}
+[0.546374] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found ament_cmake_cpplint: 0.12.14 (/opt/ros/humble/share/ament_cmake_cpplint/cmake)\n'}
+[0.546810] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found ament_cmake_flake8: 0.12.14 (/opt/ros/humble/share/ament_cmake_flake8/cmake)\n'}
+[0.547242] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found ament_cmake_lint_cmake: 0.12.14 (/opt/ros/humble/share/ament_cmake_lint_cmake/cmake)\n'}
+[0.547685] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found ament_cmake_pep257: 0.12.14 (/opt/ros/humble/share/ament_cmake_pep257/cmake)\n'}
+[0.548119] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found ament_cmake_clang_format: 0.12.14 (/opt/ros/humble/share/ament_cmake_clang_format/cmake)\n'}
+[0.548542] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Found ament_cmake_xmllint: 0.12.14 (/opt/ros/humble/share/ament_cmake_xmllint/cmake)\n'}
+[0.588160] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.594850] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Generating done\n'}
+[0.597152] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Build files have been written to: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver\n'}
+[0.600088] (-) TimerEvent: {}
+[0.604478] (spinnaker_camera_driver) CommandEnded: {'returncode': 0}
+[0.604830] (spinnaker_camera_driver) JobProgress: {'identifier': 'spinnaker_camera_driver', 'progress': 'build'}
+[0.605330] (spinnaker_camera_driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver', '--', '-j128', '-l128'], 'cwd': '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'karthik'), ('LC_TIME', 'de_DE.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/antigravity/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('ANTIGRAVITY_CLI_ALIAS', 'agy'), ('HOME', '/home/karthik'), ('CHROME_DESKTOP', 'antigravity.desktop'), ('OLDPWD', '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver'), ('TERM_PROGRAM_VERSION', '1.104.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/antigravity.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/antigravity/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'de_DE.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/antigravity/antigravity'), ('MANAGERPID', '3174'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '3437'), ('BUNDLED_DEBUGPY_PATH', '/home/karthik/.antigravity/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5610'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'karthik'), ('JOURNAL_STREAM', '8:80912'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'karthik'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/karthik/.local/bin:/home/karthik/.local/bin:/opt/spinnaker/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/karthik/.antigravity/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/Karthik:@/tmp/.ICE-unix/3414,unix/Karthik:/tmp/.ICE-unix/3414'), ('INVOCATION_ID', '8c000bce77184e7abaf8e7054f526e83'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('SPINNAKER_GENTL64_CTI', '/opt/spinnaker/lib/spinnaker-gentl/Spinnaker_GenTL.cti'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/karthik/.antigravity/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-f3ee66c29dd09338.txt'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('PYTHONSTARTUP', '/home/karthik/.config/Antigravity/User/workspaceStorage/d88c120b86d835b02216619077cb693b/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-305ff7234e.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('GENICAM_GENTL64_PATH', '/opt/spinnaker/lib/spinnaker-gentl'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.632100] (spinnaker_camera_driver) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding CXX object CMakeFiles/camera_driver.dir/src/camera.cpp.o\x1b[0m\n'}
+[0.632178] (spinnaker_camera_driver) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/camera_driver.dir/src/spinnaker_wrapper.cpp.o\x1b[0m\n'}
+[0.632204] (spinnaker_camera_driver) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/camera_driver.dir/src/camera_driver.cpp.o\x1b[0m\n'}
+[0.632420] (spinnaker_camera_driver) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/camera_driver.dir/src/spinnaker_wrapper_impl.cpp.o\x1b[0m\n'}
+[0.632475] (spinnaker_camera_driver) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/camera_driver.dir/src/pixel_format.cpp.o\x1b[0m\n'}
+[0.632529] (spinnaker_camera_driver) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/camera_driver.dir/src/genicam_utils.cpp.o\x1b[0m\n'}
+[0.632674] (spinnaker_camera_driver) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/camera_driver.dir/src/utils.cpp.o\x1b[0m\n'}
+[0.632952] (spinnaker_camera_driver) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/camera_driver.dir/src/image.cpp.o\x1b[0m\n'}
+[0.700222] (-) TimerEvent: {}
+[0.800549] (-) TimerEvent: {}
+[0.900830] (-) TimerEvent: {}
+[1.001098] (-) TimerEvent: {}
+[1.101357] (-) TimerEvent: {}
+[1.201648] (-) TimerEvent: {}
+[1.301983] (-) TimerEvent: {}
+[1.402326] (-) TimerEvent: {}
+[1.502682] (-) TimerEvent: {}
+[1.603021] (-) TimerEvent: {}
+[1.703328] (-) TimerEvent: {}
+[1.803626] (-) TimerEvent: {}
+[1.903984] (-) TimerEvent: {}
+[2.004315] (-) TimerEvent: {}
+[2.104624] (-) TimerEvent: {}
+[2.204915] (-) TimerEvent: {}
+[2.305256] (-) TimerEvent: {}
+[2.405584] (-) TimerEvent: {}
+[2.505915] (-) TimerEvent: {}
+[2.606243] (-) TimerEvent: {}
+[2.706518] (-) TimerEvent: {}
+[2.806811] (-) TimerEvent: {}
+[2.907095] (-) TimerEvent: {}
+[3.007365] (-) TimerEvent: {}
+[3.107668] (-) TimerEvent: {}
+[3.207970] (-) TimerEvent: {}
+[3.308263] (-) TimerEvent: {}
+[3.408585] (-) TimerEvent: {}
+[3.508926] (-) TimerEvent: {}
+[3.609245] (-) TimerEvent: {}
+[3.709575] (-) TimerEvent: {}
+[3.809966] (-) TimerEvent: {}
+[3.910339] (-) TimerEvent: {}
+[4.010684] (-) TimerEvent: {}
+[4.111026] (-) TimerEvent: {}
+[4.211348] (-) TimerEvent: {}
+[4.311684] (-) TimerEvent: {}
+[4.412006] (-) TimerEvent: {}
+[4.512300] (-) TimerEvent: {}
+[4.612677] (-) TimerEvent: {}
+[4.713022] (-) TimerEvent: {}
+[4.813334] (-) TimerEvent: {}
+[4.913611] (-) TimerEvent: {}
+[5.013995] (-) TimerEvent: {}
+[5.114319] (-) TimerEvent: {}
+[5.214656] (-) TimerEvent: {}
+[5.314978] (-) TimerEvent: {}
+[5.415274] (-) TimerEvent: {}
+[5.515522] (-) TimerEvent: {}
+[5.615774] (-) TimerEvent: {}
+[5.716057] (-) TimerEvent: {}
+[5.816368] (-) TimerEvent: {}
+[5.916664] (-) TimerEvent: {}
+[6.016932] (-) TimerEvent: {}
+[6.117186] (-) TimerEvent: {}
+[6.217462] (-) TimerEvent: {}
+[6.317796] (-) TimerEvent: {}
+[6.418112] (-) TimerEvent: {}
+[6.518440] (-) TimerEvent: {}
+[6.618755] (-) TimerEvent: {}
+[6.719052] (-) TimerEvent: {}
+[6.819317] (-) TimerEvent: {}
+[6.919577] (-) TimerEvent: {}
+[7.019931] (-) TimerEvent: {}
+[7.120241] (-) TimerEvent: {}
+[7.220558] (-) TimerEvent: {}
+[7.320896] (-) TimerEvent: {}
+[7.421214] (-) TimerEvent: {}
+[7.521524] (-) TimerEvent: {}
+[7.621846] (-) TimerEvent: {}
+[7.722160] (-) TimerEvent: {}
+[7.822475] (-) TimerEvent: {}
+[7.922809] (-) TimerEvent: {}
+[8.023118] (-) TimerEvent: {}
+[8.123430] (-) TimerEvent: {}
+[8.223743] (-) TimerEvent: {}
+[8.324067] (-) TimerEvent: {}
+[8.424353] (-) TimerEvent: {}
+[8.524593] (-) TimerEvent: {}
+[8.624833] (-) TimerEvent: {}
+[8.725064] (-) TimerEvent: {}
+[8.825328] (-) TimerEvent: {}
+[8.925598] (-) TimerEvent: {}
+[9.025881] (-) TimerEvent: {}
+[9.126122] (-) TimerEvent: {}
+[9.226417] (-) TimerEvent: {}
+[9.326736] (-) TimerEvent: {}
+[9.427051] (-) TimerEvent: {}
+[9.527392] (-) TimerEvent: {}
+[9.627738] (-) TimerEvent: {}
+[9.728083] (-) TimerEvent: {}
+[9.828386] (-) TimerEvent: {}
+[9.928664] (-) TimerEvent: {}
+[10.028927] (-) TimerEvent: {}
+[10.129208] (-) TimerEvent: {}
+[10.229527] (-) TimerEvent: {}
+[10.329840] (-) TimerEvent: {}
+[10.430123] (-) TimerEvent: {}
+[10.530431] (-) TimerEvent: {}
+[10.630703] (-) TimerEvent: {}
+[10.730986] (-) TimerEvent: {}
+[10.831311] (-) TimerEvent: {}
+[10.931609] (-) TimerEvent: {}
+[11.031957] (-) TimerEvent: {}
+[11.132248] (-) TimerEvent: {}
+[11.232544] (-) TimerEvent: {}
+[11.332817] (-) TimerEvent: {}
+[11.433094] (-) TimerEvent: {}
+[11.533374] (-) TimerEvent: {}
+[11.633716] (-) TimerEvent: {}
+[11.734065] (-) TimerEvent: {}
+[11.834381] (-) TimerEvent: {}
+[11.934713] (-) TimerEvent: {}
+[12.035053] (-) TimerEvent: {}
+[12.135393] (-) TimerEvent: {}
+[12.235726] (-) TimerEvent: {}
+[12.336056] (-) TimerEvent: {}
+[12.436374] (-) TimerEvent: {}
+[12.536670] (-) TimerEvent: {}
+[12.636950] (-) TimerEvent: {}
+[12.737266] (-) TimerEvent: {}
+[12.837580] (-) TimerEvent: {}
+[12.937927] (-) TimerEvent: {}
+[13.038258] (-) TimerEvent: {}
+[13.060788] (spinnaker_camera_driver) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX shared library libcamera_driver.so\x1b[0m\n'}
+[13.138374] (-) TimerEvent: {}
+[13.238701] (-) TimerEvent: {}
+[13.279037] (spinnaker_camera_driver) StdoutLine: {'line': b'[ 81%] Built target camera_driver\n'}
+[13.290595] (spinnaker_camera_driver) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding CXX object CMakeFiles/camera_driver_node.dir/src/camera_driver_node.cpp.o\x1b[0m\n'}
+[13.338770] (-) TimerEvent: {}
+[13.439020] (-) TimerEvent: {}
+[13.539353] (-) TimerEvent: {}
+[13.639696] (-) TimerEvent: {}
+[13.740013] (-) TimerEvent: {}
+[13.840296] (-) TimerEvent: {}
+[13.940563] (-) TimerEvent: {}
+[14.040870] (-) TimerEvent: {}
+[14.141152] (-) TimerEvent: {}
+[14.241421] (-) TimerEvent: {}
+[14.341701] (-) TimerEvent: {}
+[14.441988] (-) TimerEvent: {}
+[14.542320] (-) TimerEvent: {}
+[14.642666] (-) TimerEvent: {}
+[14.743002] (-) TimerEvent: {}
+[14.843360] (-) TimerEvent: {}
+[14.943710] (-) TimerEvent: {}
+[15.044042] (-) TimerEvent: {}
+[15.144352] (-) TimerEvent: {}
+[15.244615] (-) TimerEvent: {}
+[15.344891] (-) TimerEvent: {}
+[15.445200] (-) TimerEvent: {}
+[15.545469] (-) TimerEvent: {}
+[15.580315] (spinnaker_camera_driver) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable camera_driver_node\x1b[0m\n'}
+[15.645571] (-) TimerEvent: {}
+[15.661064] (spinnaker_camera_driver) StdoutLine: {'line': b'[100%] Built target camera_driver_node\n'}
+[15.673273] (spinnaker_camera_driver) CommandEnded: {'returncode': 0}
+[15.673751] (spinnaker_camera_driver) JobProgress: {'identifier': 'spinnaker_camera_driver', 'progress': 'install'}
+[15.678454] (spinnaker_camera_driver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver'], 'cwd': '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'karthik'), ('LC_TIME', 'de_DE.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/antigravity/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('ANTIGRAVITY_CLI_ALIAS', 'agy'), ('HOME', '/home/karthik'), ('CHROME_DESKTOP', 'antigravity.desktop'), ('OLDPWD', '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver'), ('TERM_PROGRAM_VERSION', '1.104.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/antigravity.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/antigravity/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'de_DE.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/antigravity/antigravity'), ('MANAGERPID', '3174'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '3437'), ('BUNDLED_DEBUGPY_PATH', '/home/karthik/.antigravity/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5610'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'karthik'), ('JOURNAL_STREAM', '8:80912'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'karthik'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/karthik/.local/bin:/home/karthik/.local/bin:/opt/spinnaker/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/karthik/.antigravity/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/Karthik:@/tmp/.ICE-unix/3414,unix/Karthik:/tmp/.ICE-unix/3414'), ('INVOCATION_ID', '8c000bce77184e7abaf8e7054f526e83'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('SPINNAKER_GENTL64_CTI', '/opt/spinnaker/lib/spinnaker-gentl/Spinnaker_GenTL.cti'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/karthik/.antigravity/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-f3ee66c29dd09338.txt'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('PYTHONSTARTUP', '/home/karthik/.config/Antigravity/User/workspaceStorage/d88c120b86d835b02216619077cb693b/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-305ff7234e.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/build/spinnaker_camera_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('GENICAM_GENTL64_PATH', '/opt/spinnaker/lib/spinnaker-gentl'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[15.683292] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Install configuration: "RelWithDebInfo"\n'}
+[15.683394] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/spinnaker_camera_driver/camera_driver_node\n'}
+[15.684152] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/spinnaker_camera_driver/camera_driver_node" to ""\n'}
+[15.684186] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/libcamera_driver.so\n'}
+[15.691683] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/libcamera_driver.so" to ""\n'}
+[15.691756] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/cmake/spinnaker_camera_driver/spinnaker_camera_driverTargets.cmake\n'}
+[15.691796] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/cmake/spinnaker_camera_driver/spinnaker_camera_driverTargets-relwithdebinfo.cmake\n'}
+[15.691838] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/cmake/spinnaker_camera_driver/spinnaker_camera_driverConfig.cmake\n'}
+[15.691868] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/cmake/spinnaker_camera_driver/spinnaker_camera_driverConfigVersion.cmake\n'}
+[15.691902] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include\n'}
+[15.691933] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver\n'}
+[15.691959] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/lifecycle_types.hpp\n'}
+[15.691990] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/exposure_controller.hpp\n'}
+[15.692042] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/spinnaker_wrapper.hpp\n'}
+[15.692077] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/pixel_format.hpp\n'}
+[15.692123] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/logging.hpp\n'}
+[15.692184] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/image.hpp\n'}
+[15.692218] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/camera.hpp\n'}
+[15.692253] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/camera_driver.hpp\n'}
+[15.692287] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/diagnostic_levels.hpp\n'}
+[15.692343] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/synchronizer.hpp\n'}
+[15.692377] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/include/spinnaker_camera_driver/utils.hpp\n'}
+[15.692411] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config\n'}
+[15.692444] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/flir_ax5.yaml\n'}
+[15.692490] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/blackfly.yaml\n'}
+[15.692554] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/chameleon.yaml\n'}
+[15.692600] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/grasshopper.yaml\n'}
+[15.692635] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/oryx.yaml\n'}
+[15.692685] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/firefly_ffy_u3162c.yaml\n'}
+[15.692720] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/firefly.yaml\n'}
+[15.692793] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//config/blackfly_s.yaml\n'}
+[15.692921] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//launch\n'}
+[15.692975] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//launch/multiple_cameras_ptp.launch.py\n'}
+[15.693018] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//launch/multiple_cameras.launch.py\n'}
+[15.693047] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//launch/gige_node.launch.py\n'}
+[15.693068] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver//launch/driver_node.launch.py\n'}
+[15.693088] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/lib/spinnaker_camera_driver/linux_setup_flir\n'}
+[15.693137] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/ament_index/resource_index/package_run_dependencies/spinnaker_camera_driver\n'}
+[15.693185] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/ament_index/resource_index/parent_prefix_path/spinnaker_camera_driver\n'}
+[15.693206] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/environment/ament_prefix_path.sh\n'}
+[15.693225] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/environment/ament_prefix_path.dsv\n'}
+[15.693245] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/environment/path.sh\n'}
+[15.693264] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/environment/path.dsv\n'}
+[15.693283] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/local_setup.bash\n'}
+[15.693302] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/local_setup.sh\n'}
+[15.693321] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/local_setup.zsh\n'}
+[15.693339] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/local_setup.dsv\n'}
+[15.693357] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/package.dsv\n'}
+[15.693393] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/ament_index/resource_index/packages/spinnaker_camera_driver\n'}
+[15.693435] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/ament_index/resource_index/rclcpp_components/spinnaker_camera_driver\n'}
+[15.693454] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/cmake/spinnaker_camera_driverConfig.cmake\n'}
+[15.693471] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/cmake/spinnaker_camera_driverConfig-version.cmake\n'}
+[15.693494] (spinnaker_camera_driver) StdoutLine: {'line': b'-- Installing: /home/karthik/dds_ros2/flirCAMERA/flir_camera_driver/install/spinnaker_camera_driver/share/spinnaker_camera_driver/package.xml\n'}
+[15.694630] (spinnaker_camera_driver) CommandEnded: {'returncode': 0}
+[15.703569] (spinnaker_camera_driver) JobEnded: {'identifier': 'spinnaker_camera_driver', 'rc': 0}
+[15.704037] (-) EventReactorShutdown: {}

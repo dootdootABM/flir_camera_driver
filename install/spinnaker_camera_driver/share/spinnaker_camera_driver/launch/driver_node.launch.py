@@ -55,7 +55,7 @@ def launch_setup(context, *args, **kwargs):
     serial_arg = LaunchConfig("serial").perform(context)
     camera_name = LaunchConfig("camera_name").perform(context)
 
-    # Get new params
+    # Capture new parameters from Launch Configuration
     exposure_auto = LaunchConfig("exposure_auto").perform(context)
     exposure_time = float(LaunchConfig("exposure_time").perform(context))
     gain_auto = LaunchConfig("gain_auto").perform(context)
@@ -77,7 +77,7 @@ def launch_setup(context, *args, **kwargs):
     else:
         camera_params = EXAMPLE_PARAMETERS["firefly"].copy()
 
-    # Apply configuration
+    # Update parameters with launch args
     camera_params.update(
         {
             "image_width": cap_w,
@@ -87,14 +87,14 @@ def launch_setup(context, *args, **kwargs):
             "binning_x": 1,
             "binning_y": 1,
             
-            # Exposure/Gain/FPS overrides
+            # New parameter overrides
             "exposure_auto": exposure_auto,
             "exposure_time": exposure_time,
             "gain_auto": gain_auto,
             "gain": gain,
             "frame_rate": fps,
             "frame_rate_enable": True,
-            "frame_rate_auto": "Off", # We force FPS manually
+            "frame_rate_auto": "Off",
         }
     )
 
@@ -108,7 +108,7 @@ def launch_setup(context, *args, **kwargs):
 
     nodes = []
 
-    # 1. Camera Driver
+    # 1. Camera Driver (Full Res)
     nodes.append(Node(
         package="spinnaker_camera_driver",
         executable="camera_driver_node",
@@ -127,7 +127,7 @@ def launch_setup(context, *args, **kwargs):
         ],
     ))
 
-    # 2. Decimator Node (720x540 Output)
+    # 2. Decimator Node (Working Configuration)
     nodes.append(Node(
         package="image_proc",
         executable="crop_decimate_node",
@@ -142,10 +142,12 @@ def launch_setup(context, *args, **kwargs):
             "height": 0,
         }],
         remappings=[
-            ("camera/image_raw", "image_raw"),
-            ("camera/camera_info", "camera_info"),
-            ("camera_out/image_raw", "decimated/image_raw"),
-            ("camera_out/camera_info", "decimated/camera_info"),
+            # Input
+            ("in/image_raw", "image_raw"),
+            ("in/camera_info", "camera_info"),
+            # Output
+            ("out/image_raw", "decimated/image_raw"),
+            ("out/camera_info", "decimated/camera_info"),
         ],
     ))
 
@@ -160,12 +162,12 @@ def generate_launch_description():
             LaunchArg("serial", default_value="auto"),
             LaunchArg("parameter_file", default_value=""),
             
-            # New Arguments
-            LaunchArg("exposure_auto", default_value="Off", description="Exposure Auto: Off/Continuous"),
-            LaunchArg("exposure_time", default_value="10000.0", description="Exposure Time (us)"),
-            LaunchArg("gain_auto", default_value="Off", description="Gain Auto: Off/Continuous"),
-            LaunchArg("gain", default_value="5.0", description="Gain (dB)"),
-            LaunchArg("fps", default_value="60.0", description="Frame Rate (Hz)"),
+            # New Arguments for launch_all.sh control
+            LaunchArg("exposure_auto", default_value="Off"),
+            LaunchArg("exposure_time", default_value="10000.0"),
+            LaunchArg("gain_auto", default_value="Off"),
+            LaunchArg("gain", default_value="5.0"),
+            LaunchArg("fps", default_value="60.0"),
 
             OpaqueFunction(function=launch_setup),
         ]
